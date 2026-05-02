@@ -1,0 +1,92 @@
+Processing uno (platform: atmelavr; board: uno; framework: arduino; upload_port: COM5; upload_speed: 9600; upload_flags: --dudeconf=$PACKAGE_DIR/avrdude.conf; lib_deps: adafruit/DHT sensor library@^1.4.7, adafruit/Adafruit Unified Sensor@^1.1.14, bblanchon/ArduinoJson@^6.21.5; monitor_speed: 9600)
+--------------------------------------------------------------------------------
+CONFIGURATION: https://docs.platformio.org/page/boards/atmelavr/uno.html
+PLATFORM: Atmel AVR (5.2.0) > Arduino Uno
+HARDWARE: ATMEGA328P 16MHz, 2KB RAM, 31.50KB Flash
+DEBUG: Current (avr-stub) External (avr-stub, simavr)
+PACKAGES: 
+ - framework-arduino-avr @ 5.3.0 
+ - tool-avrdude @ 1.60300.200527 (6.3.0) 
+ - toolchain-atmelavr @ 1.70300.191015 (7.3.0)
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 8 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- DHT sensor library @ 1.4.7 (License: Unknown, Path: C:\Users\adamb\OneDrive\Documents\PlatformIO\Projects\hackathonInsat\.pio\libdeps\uno\DHT sensor library)
+|   |-- Adafruit Unified Sensor @ 1.1.15 (License: Unknown, Path: C:\Users\adamb\OneDrive\Documents\PlatformIO\Projects\hackathonInsat\.pio\libdeps\uno\Adafruit Unified Sensor)
+|-- Adafruit Unified Sensor @ 1.1.15 (License: Unknown, Path: C:\Users\adamb\OneDrive\Documents\PlatformIO\Projects\hackathonInsat\.pio\libdeps\uno\Adafruit Unified Sensor)
+|-- ArduinoJson @ 6.21.6 (License: Unknown, Path: C:\Users\adamb\OneDrive\Documents\PlatformIO\Projects\hackathonInsat\.pio\libdeps\uno\ArduinoJson)
+|-- EEPROM @ 2.0 (License: Unknown, Path: C:\Users\adamb\.platformio\packages\framework-arduino-avr\libraries\EEPROM)
+|-- SoftwareSerial @ 1.0 (License: Unknown, Path: C:\Users\adamb\.platformio\packages\framework-arduino-avr\libraries\SoftwareSerial)
+Building in release mode
+MethodWrapper(["checkprogsize"], [".pio\build\uno\firmware.elf"])
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [===       ]  32.3% (used 662 bytes from 2048 bytes)
+Flash: [=====     ]  54.3% (used 17526 bytes from 32256 bytes)
+.pio\build\uno\firmware.elf  :
+
+section                     size      addr
+
+.data                        374   8388864
+
+.text                      17152         0
+
+.bss                         288   8389238
+
+.comment                      17         0
+
+.note.gnu.avr.deviceinfo      64         0
+
+.debug_aranges               320         0
+
+.debug_info                 3394         0
+
+.debug_abbrev               1642         0
+
+.debug_line                 1822         0
+
+.debug_str                   520         0
+
+Total                      25593
+<lambda>(["upload"], [".pio\build\uno\firmware.hex"])
+AVAILABLE: arduino
+CURRENT: upload_protocol = arduino
+BeforeUpload(["upload"], [".pio\build\uno\firmware.hex"])
+Using manually specified: COM5
+avrdude --dudeconf=/avrdude.conf -v -p atmega328p -C C:\Users\adamb\.platformio\packages\tool-avrdude\avrdude.conf -c arduino -b 9600 -D -P COM5 -U flash:w:.pio\build\uno\firmware.hex:i
+avrdude: unknown option -- -
+Usage: avrdude [options]
+Options:
+  -p <partno>                Required. Specify AVR device.
+  -b <baudrate>              Override RS-232 baud rate.
+  -B <bitclock>              Specify JTAG/STK500v2 bit clock period (us).
+  -C <config-file>           Specify location of configuration file.
+  -c <programmer>            Specify programmer type.
+  -D                         Disable auto erase for flash memory
+  -i <delay>                 ISP Clock Delay [in microseconds]
+  -P <port>                  Specify connection port.
+  -F                         Override invalid signature check.
+  -e                         Perform a chip erase.
+  -O                         Perform RC oscillator calibration (see AVR053). 
+  -U <memtype>:r|w|v:<filename>[:format]
+                             Memory operation specification.
+                             Multiple -U options are allowed, each request
+                             is performed in the order specified.
+  -n                         Do not write anything to the device.
+  -V                         Do not verify.
+  -u                         Disable safemode, default when running from a script.
+  -s                         Silent safemode operation, will not ask you if
+                             fuses should be changed back.
+  -t                         Enter terminal mode.
+  -E <exitspec>[,<exitspec>] List programmer exit specifications.
+  -x <extended_param>        Pass <extended_param> to programmer.
+  -y                         Count # erase cycles in EEPROM.
+  -Y <number>                Initialize erase cycle # in EEPROM.
+  -v                         Verbose output. -v -v for more.
+  -q                         Quell progress output. -q -q for less.
+  -l logfile                 Use logfile rather than stderr for diagnostics.
+  -?                         Display this usage.
+
+avrdude version 6.3, URL: <http://savannah.nongnu.org/projects/avrdude/>
+========================= [SUCCESS] Took 1.34 seconds =========================
